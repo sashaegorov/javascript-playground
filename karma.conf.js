@@ -1,5 +1,5 @@
 // Karma configuration
-module.exports = function(config) {
+module.exports = function (config) {
   config.set({
 
     basePath: '.',
@@ -15,15 +15,14 @@ module.exports = function(config) {
       'test/**/*.spec.js'
     ],
 
-    exclude: [
-    ],
+    exclude: [],
 
     preprocessors: {
-      'src/**/*.js': ['babel', 'commonjs'],
+      'src/**/*.js': ['babel', 'coverage', 'commonjs'],
       'test/**/*.js': ['babel', 'commonjs']
     },
 
-    reporters: ['progress'],
+    reporters: ['coverage', 'progress'],
 
     port: 9876,
 
@@ -33,7 +32,7 @@ module.exports = function(config) {
 
     autoWatch: true,
 
-    browsers: ['Chrome', 'PhantomJS'],
+    browsers: ['Chrome'],
 
     singleRun: false,
 
@@ -48,6 +47,13 @@ module.exports = function(config) {
 
     commonjsPreprocessor: {
       modulesRoot: '.'
+    },
+
+    coverageReporter: {
+      reporters: [
+        {type: 'html', dir: 'coverage/'},
+        {type: 'text'}
+      ],
     }
   })
 };

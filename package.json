@@ -17,7 +17,7 @@
     "karma-babel-preprocessor": "^6.0.1",
     "karma-chrome-launcher": "^2.0.0",
     "karma-commonjs": "^1.0.0",
-    "karma-jasmine": "^1.0.2",
-    "karma-phantomjs-launcher": "^1.0.2"
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.0.2"
   }
 }
